@@ -1,0 +1,182 @@
+// Prisma schema for BulkInvest
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TransactionType {
+  BUY
+  SELL
+  DEPOSIT
+}
+
+model User {
+  id             String          @id @default(cuid())
+  name           String
+  email          String          @unique
+  password       String
+  cashBalance    Float           @default(0)
+  /// Whether the email address has been confirmed via a signed link.
+  /// Gates the higher account tier (see ACCOUNT_LIMITS).
+  isEmailVerified Boolean        @default(false)
+  /// Single outstanding confirmation token; unique so a lookup is an index hit
+  /// and no two accounts can ever share one.
+  verificationToken String?      @unique
+  /// Confirmation tokens must be used within this window.
+  verificationTokenExpiresAt DateTime?
+  holdings       Holding[]
+  transactions   Transaction[]
+  cryptoDeposits CryptoDeposit[]
+  orders         Order[]
+  withdrawals    WithdrawalRequest[]
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+model Holding {
+  id       String @id @default(cuid())
+  userId   String
+  symbol   String
+  shares   Float  @default(0)
+  avgPrice Float  @default(0)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([userId, symbol])
+  @@index([userId])
+}
+
+model Transaction {
+  id        String          @id @default(cuid())
+  userId    String
+  // Trades reference a ticker; deposits have no instrument, so this is null
+  // for a DEPOSIT row (the funded amount lives in `amount`).
+  symbol    String?
+  type      TransactionType
+  // Trade columns. Zero for DEPOSIT rows.
+  shares    Float
+  price     Float
+  // Deposit columns. Null for BUY/SELL rows.
+  amount    Float?
+  currency  String?
+  provider  String?
+  // Provider reference (e.g. a Stripe Checkout Session id). Unique so a
+  // replayed webhook cannot credit the same payment twice.
+  reference String?         @unique
+  // On-chain transaction hash for crypto deposits.
+  txHash    String?
+  createdAt DateTime        @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([userId, createdAt])
+}
+
+/// A locally-tracked broker order, so queued/unfilled orders remain visible even
+/// when the broker reports no position yet (e.g. placed outside market hours).
+model Order {
+  id             String   @id @default(cuid())
+  userId         String
+  provider       String   @default("alpaca")
+  /// Broker order id; unique so a resubmit cannot double-record.
+  providerId     String   @unique
+  symbol         String
+  side           String
+  type           String
+  qty            Float
+  notional       Float?
+  limitPrice     Float?
+  /// Broker status: new | accepted | pending_new | filled | canceled | ...
+  status         String
+  filledQty      Float    @default(0)
+  filledAvgPrice Float    @default(0)
+  /// Live quote captured before submission (used when the fill is not yet known).
+  referencePrice Float?
+  assetClass     String?
+  submittedAt    DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, status])
+  @@index([userId, submittedAt])
+}
+
+/// A pending or settled crypto deposit, tracked from charge creation through
+/// on-chain confirmation. The provider id is unique so the gateway can safely
+/// retry its callback.
+model CryptoDeposit {
+  id            String    @id @default(cuid())
+  userId        String
+  provider      String    @default("nowpayments")
+  /// Provider payment id; null briefly if the webhook beats the API response.
+  providerId    String?   @unique
+  /// Local order id sent to the provider, so the webhook can always correlate.
+  orderId       String    @unique
+  /// Display asset the user chose, e.g. USDT / BTC / ETH.
+  asset         String
+  /// Provider currency code actually invoiced, e.g. usdttrc20 / btc / eth.
+  payCurrency   String
+  /// Fiat value requested, in USD.
+  amountUsd     Float
+  /// Crypto amount the user must send.
+  payAmount     Float?
+  /// Deposit wallet address.
+  payAddress    String?
+  network       String?
+  /// waiting | confirming | confirmed | finished | failed | expired
+  status        String    @default("waiting")
+  /// On-chain hash of the incoming transfer.
+  txHash        String?
+  /// The credited Transaction row, once settled (idempotency).
+  transactionId String?   @unique
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([status])
+}
+
+/// A user's request to withdraw crypto to an external wallet.
+///
+/// Deliberately request-only: submitting one records the intent for manual
+/// review and does NOT move funds, touch the broker, or debit any balance.
+/// Payout is performed out of band, so `status` moves to COMPLETED/REJECTED
+/// later. `reference` is the human-facing ticket id shown to the user.
+model WithdrawalRequest {
+  id        String @id @default(cuid())
+  userId    String
+  /// Display asset, e.g. USDT / BTC / ETH.
+  asset     String
+  /// Network the funds will be sent on, e.g. TRON (TRC20).
+  network   String
+  /// Fiat value requested, in USD.
+  amountUsd Float
+  /// Destination wallet address supplied by the user.
+  address   String
+  /// Public ticket id, e.g. WD-8F3K2Q.
+  reference String @unique
+  /// PENDING | COMPLETED | REJECTED
+  status    String @default("PENDING")
+  /// Operator note, e.g. the payout tx hash once sent.
+  note      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+  @@index([status])
+}

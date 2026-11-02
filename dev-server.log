@@ -1,0 +1,1174 @@
+
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 2.9s
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 2s (275 modules)
+ GET /api/auth/csrf 200 in 1277ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.1s (754 modules)
+ GET / 200 in 4453ms
+ ✓ Compiled in 554ms (239 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 3.5s (864 modules)
+ GET /login 200 in 3774ms
+ ✓ Compiled /signup in 258ms (871 modules)
+ GET /signup 200 in 418ms
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 963ms (180 modules)
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 6.2s (1955 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ ○ Compiling /api/account ...
+ ✓ Compiled /api/account in 817ms (1178 modules)
+ ✓ Compiled (1180 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+ GET /dashboard 200 in 11863ms
+ GET /api/markets/featured 200 in 3133ms
+ GET /api/markets/featured 200 in 3156ms
+ GET /api/account 200 in 3382ms
+ GET /api/account 200 in 4246ms
+ GET /markets 200 in 13982ms
+ GET /api/markets/featured 200 in 820ms
+ ✓ Compiled /api/portfolio in 243ms (1182 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1573ms
+ GET /api/markets/featured 200 in 1722ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1364ms
+ GET /markets 200 in 921ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+ GET /api/account 200 in 725ms
+ GET /api/account 200 in 735ms
+ GET /api/markets/featured 200 in 945ms
+ GET /api/markets/featured 200 in 965ms
+ GET /api/markets/featured 200 in 909ms
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1596ms
+ GET /api/markets/featured 200 in 919ms
+ GET /api/markets/featured 200 in 2344ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1353ms
+ GET /api/markets/featured 200 in 950ms
+ GET /api/markets/featured 200 in 1098ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1504ms
+ GET /api/markets/featured 200 in 915ms
+ GET /api/markets/featured 200 in 1175ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1338ms
+ GET /api/markets/featured 200 in 847ms
+ GET /api/markets/featured 200 in 879ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1369ms
+ GET /api/markets/featured 200 in 814ms
+ GET /api/markets/featured 200 in 1191ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1309ms
+ GET /api/markets/featured 200 in 812ms
+ GET /api/markets/featured 200 in 870ms
+ ✓ Compiled in 2.5s (2159 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 430ms (1164 modules)
+ GET /api/auth/csrf 200 in 573ms
+ ✓ Compiled /api/signup in 323ms (1167 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 931ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 684ms
+ ○ Compiling /api/tmp-assets-probe ...
+ ✓ Compiled /api/tmp-assets-probe in 1437ms (1169 modules)
+ GET /api/tmp-assets-probe 200 in 1508ms
+ ✓ Compiled in 435ms (1984 modules)
+ GET /api/auth/csrf 200 in 35ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 510ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 518ms
+ GET /api/tmp-assets-probe 200 in 36ms
+ ✓ Compiled in 513ms (1982 modules)
+ ✓ Compiled in 450ms (1982 modules)
+ ✓ Compiled in 468ms (1982 modules)
+ ✓ Compiled in 423ms (1982 modules)
+ GET /api/auth/csrf 200 in 45ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 579ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 545ms
+ GET /api/tmp-assets-probe 200 in 32ms
+ ✓ Compiled in 527ms (1982 modules)
+ GET /api/auth/csrf 200 in 50ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 474ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 523ms
+ GET /api/tmp-assets-probe 200 in 25ms
+ ✓ Compiled in 449ms (1982 modules)
+ GET /api/auth/csrf 200 in 29ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 744ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 585ms
+Failed to set fetch cache https://paper-api.alpaca.markets/v2/assets?status=active Error: Failed to set Next.js data cache, items over 2MB can not be cached (8698234 bytes)
+    at IncrementalCache.set (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\incremental-cache\index.js:388:23)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\compiled\next-server\app-route.runtime.dev.js:6:54468
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AssetsApi.fetchApi (webpack-internal:///(rsc)/./node_modules/@alpacahq/alpaca-trade-api/dist/index.mjs:1318:20)
+Failed to set fetch cache https://paper-api.alpaca.markets/v2/assets?status=active Error: Failed to set Next.js data cache, items over 2MB can not be cached (8698234 bytes)
+    at IncrementalCache.set (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\incremental-cache\index.js:388:23)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\compiled\next-server\app-route.runtime.dev.js:6:54468
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AssetsApi.fetchApi (webpack-internal:///(rsc)/./node_modules/@alpacahq/alpaca-trade-api/dist/index.mjs:1318:20)
+ GET /api/tmp-assets-probe 200 in 4822ms
+ ✓ Compiled in 463ms (1982 modules)
+ GET /api/auth/csrf 200 in 34ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 500ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 531ms
+Failed to set fetch cache https://paper-api.alpaca.markets/v2/assets?status=active Error: Failed to set Next.js data cache, items over 2MB can not be cached (8698234 bytes)
+    at IncrementalCache.set (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\incremental-cache\index.js:388:23)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\compiled\next-server\app-route.runtime.dev.js:6:54468
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AssetsApi.fetchApi (webpack-internal:///(rsc)/./node_modules/@alpacahq/alpaca-trade-api/dist/index.mjs:1318:20)
+ GET /api/tmp-assets-probe 200 in 3147ms
+ ✓ Compiled in 619ms (1951 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 195ms (1140 modules)
+ GET /api/auth/csrf 200 in 329ms
+ ○ Compiling /api/signup ...
+ ✓ Compiled /api/signup in 694ms (1165 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 1259ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 637ms
+ ✓ Compiled /api/tmp-assets-probe in 311ms (1167 modules)
+Failed to set fetch cache https://paper-api.alpaca.markets/v2/assets?status=active Error: Failed to set Next.js data cache, items over 2MB can not be cached (8698234 bytes)
+    at IncrementalCache.set (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\incremental-cache\index.js:388:23)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\compiled\next-server\app-route.runtime.dev.js:6:54468
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async AssetsApi.fetchApi (webpack-internal:///(rsc)/./node_modules/@alpacahq/alpaca-trade-api/dist/index.mjs:1318:20)
+ GET /api/tmp-assets-probe 200 in 2770ms
+ ✓ Compiled in 203ms (1167 modules)
+ ✓ Compiled in 668ms (2117 modules)
+ ✓ Compiled in 640ms (2131 modules)
+ ✓ Compiled in 197ms (815 modules)
+ ✓ Compiled in 1157ms (1951 modules)
+ ⨯ ./src/components/FeaturedAssets.tsx
+Error: 
+  [31mx[0m Expression expected
+    ,-[[36;1;4mC:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\src\components\FeaturedAssets.tsx[0m:80:1]
+ [2m80[0m |   const priced = assets.filter((asset) => asset.price !== null).length;
+ [2m81[0m | 
+ [2m82[0m |   return (
+ [2m83[0m |     <>
+    : [31;1m     ^[0m
+ [2m84[0m |       <section aria-labelledby="featured-heading">
+ [2m85[0m |         <div className="flex flex-wrap items-end justify-between gap-4">
+ [2m86[0m |         <div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/FeaturedAssets.tsx
+./src/components/StockExplorer.tsx
+ ✓ Compiled in 345ms (1951 modules)
+ ✓ Compiled in 350ms (1951 modules)
+ ✓ Compiled in 375ms (1953 modules)
+ ✓ Compiled /api/auth/[...nextauth] in 260ms (1141 modules)
+ GET /api/auth/csrf 200 in 373ms
+ ✓ Compiled /api/signup in 216ms (1166 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 663ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 424ms
+ ✓ Compiled /api/markets/list in 239ms (1169 modules)
+ GET /api/markets/list 401 in 317ms
+ GET /api/markets/list?page=1&limit=12 200 in 3532ms
+ GET /api/markets/list?page=2&limit=12 200 in 22ms
+ GET /api/markets/list?page=1&limit=12&q=tesla 200 in 30ms
+ GET /api/markets/list?page=1&limit=12&q=microsoft 200 in 21ms
+ GET /api/markets/list?page=1&limit=12&q=AAPL 200 in 18ms
+ GET /api/markets/list?page=1&limit=12&q=BTC 200 in 18ms
+ GET /api/markets/list?page=1&limit=12&q=pltr 200 in 16ms
+ GET /api/markets/list?page=1&limit=12&q=zzzqqq 200 in 18ms
+ GET /api/markets/list?page=1028&limit=12 200 in 13ms
+ GET /api/markets/list?page=99999&limit=12 200 in 15ms
+ GET /api/markets/list?page=0 400 in 13ms
+ GET /api/markets/list?page=-1 400 in 13ms
+ GET /api/markets/list?page=abc 400 in 13ms
+ GET /api/markets/list?page=1.5 400 in 12ms
+ GET /api/markets/list?limit=0 400 in 13ms
+ GET /api/markets/list?limit=-3 400 in 12ms
+ GET /api/markets/list?limit=999 400 in 17ms
+ GET /api/markets/list?limit=abc 400 in 12ms
+ ○ Compiling /markets/[ticker] ...
+ ✓ Compiled /markets/[ticker] in 549ms (1978 modules)
+ GET /markets/AAPL 200 in 1386ms
+ GET /markets/NVDA 200 in 74ms
+ GET /markets/MSFT 200 in 82ms
+ GET /markets/TSLA 200 in 102ms
+ GET /markets/AMZN 200 in 116ms
+ GET /markets/GOOGL 200 in 89ms
+ GET /markets/META 200 in 40ms
+ GET /markets/NFLX 200 in 62ms
+ GET /markets/AMD 200 in 61ms
+ GET /markets/INTC 200 in 84ms
+ GET /markets 200 in 15702ms
+ ✓ Compiled in 250ms (1174 modules)
+ GET /api/auth/csrf 200 in 34ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 374ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 384ms
+ GET /api/markets/list?page=1&limit=48 200 in 2083ms
+ GET /api/markets/list?page=1&limit=48 200 in 11ms
+ GET /api/markets/list?page=2&limit=48 200 in 11ms
+ GET /api/markets/list?page=3&limit=48 200 in 12ms
+ GET /api/markets/list?page=200&limit=48 200 in 11ms
+ GET /api/markets/list?page=700&limit=48 200 in 11ms
+ GET /api/markets/list?page=1&limit=48&q=AAA 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=AAAA 200 in 16ms
+ GET /api/markets/list?page=1&limit=48&q=AAAC 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=AAAU 200 in 16ms
+ GET /api/markets/list?page=1&limit=48&q=AAAP 200 in 16ms
+ GET /api/markets/list?page=1&limit=48&q=AAPL 200 in 14ms
+ GET /api/markets/list?page=1&limit=48&q=NVDA 200 in 14ms
+ GET /api/markets/list?page=1&limit=48&q=MSFT 200 in 14ms
+ GET /api/markets/list?page=1&limit=48&q=TSLA 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=AMZN 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=GOOGL 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=META 200 in 14ms
+ GET /api/markets/list?page=1&limit=48&q=NFLX 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=AMD 200 in 14ms
+ GET /api/markets/list?page=1&limit=48&q=INTC 200 in 16ms
+ GET /api/markets/list?page=1&limit=48&q=PYPL 200 in 16ms
+ GET /api/markets/list?page=1&limit=48&q=COIN 200 in 15ms
+ GET /api/markets/list?page=1&limit=48&q=PLTR 200 in 14ms
+[?25h
+
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 3.2s
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 1820ms (275 modules)
+ GET /api/auth/csrf 200 in 2615ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4.2s (754 modules)
+ GET / 200 in 4514ms
+ ✓ Compiled in 364ms (239 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 5.8s (864 modules)
+ GET /login 200 in 6027ms
+ ✓ Compiled /signup in 295ms (871 modules)
+ GET /signup 200 in 460ms
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 674ms (180 modules)
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 6.3s (1907 modules)
+ GET /markets 200 in 9615ms
+ GET /markets 200 in 303ms
+ ○ Compiling /api/account ...
+ ✓ Compiled /api/account in 1017ms (1148 modules)
+ ✓ Compiled (1151 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+ GET /api/markets/featured 200 in 1642ms
+ GET /api/markets/featured 200 in 2228ms
+ GET /api/markets/featured 200 in 2195ms
+ GET /api/markets/featured 200 in 233ms
+ GET /api/account 200 in 3403ms
+ GET /api/account 200 in 3219ms
+ GET /api/account 200 in 3223ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+ GET /api/account 200 in 250ms
+ ✓ Compiled /api/markets/list in 295ms (1154 modules)
+ GET /api/markets/list?page=1&limit=12 200 in 2360ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 1421ms (1986 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/markets/featured 200 in 952ms
+ GET /dashboard 200 in 3024ms
+ GET /api/markets/featured 200 in 773ms
+^C^C
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 3.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.8s (509 modules)
+ GET / 200 in 6203ms
+ ✓ Compiled in 463ms (239 modules)
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1992ms (860 modules)
+ GET /login 200 in 2270ms
+ ✓ Compiled /signup in 245ms (867 modules)
+ GET /signup 200 in 423ms
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 554ms (180 modules)
+ ✓ Compiled /api/user/export-statement in 280ms (600 modules)
+ GET /api/user/export-statement 401 in 383ms
+ ✓ Compiled /api/user/verify-email in 173ms (605 modules)
+ GET /api/user/verify-email 303 in 228ms
+ ✓ Compiled /api/signup in 157ms (608 modules)
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `isEmailVerified`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 593ms
+ ✓ Compiled /api/auth/[...nextauth] in 164ms (610 modules)
+ GET /api/auth/csrf 200 in 602ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 397ms
+ GET /api/auth/session 200 in 17ms
+ ✓ Compiled /settings in 461ms (921 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings 200 in 643ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ POST /api/user/verify-email 201 in 31ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationTokenExpiresAt` FROM `main`.`User` WHERE (`main`.`User`.`verificationToken` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `isEmailVerified` = ?, `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ GET /api/user/verify-email?token=9501a9ade8ce45cc5fda821a6640a933dc9fbdca363993f7dc2985c594d35775 303 in 20ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?verified=1 200 in 97ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/user/verify-email 409 in 12ms
+prisma:query SELECT `main`.`WithdrawalRequest`.`id`, `main`.`WithdrawalRequest`.`asset`, `main`.`WithdrawalRequest`.`amountUsd`, `main`.`WithdrawalRequest`.`status`, `main`.`WithdrawalRequest`.`createdAt` FROM `main`.`WithdrawalRequest` WHERE `main`.`WithdrawalRequest`.`userId` = ? ORDER BY `main`.`WithdrawalRequest`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`CryptoDeposit`.`id`, `main`.`CryptoDeposit`.`asset`, `main`.`CryptoDeposit`.`amountUsd`, `main`.`CryptoDeposit`.`status`, `main`.`CryptoDeposit`.`providerId`, `main`.`CryptoDeposit`.`createdAt` FROM `main`.`CryptoDeposit` WHERE (`main`.`CryptoDeposit`.`userId` = ? AND `main`.`CryptoDeposit`.`transactionId` IS NULL) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`type`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`providerId`, `main`.`Order`.`status` FROM `main`.`Order` WHERE `main`.`Order`.`userId` = ? LIMIT ? OFFSET ?
+ GET /api/user/export-statement 200 in 28ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `isEmailVerified`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 337ms
+ GET /api/auth/csrf 200 in 20ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 369ms
+ GET /api/auth/session 200 in 13ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings 200 in 42ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ POST /api/user/verify-email 201 in 19ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationTokenExpiresAt` FROM `main`.`User` WHERE (`main`.`User`.`verificationToken` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `isEmailVerified` = ?, `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ GET /api/user/verify-email?token=689031d775c8260424a6c0d2e2cf88173750f59fe7cc093c3f31c3c74600a29b 303 in 20ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?verified=1 200 in 60ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/user/verify-email 409 in 10ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT `main`.`WithdrawalRequest`.`id`, `main`.`WithdrawalRequest`.`asset`, `main`.`WithdrawalRequest`.`amountUsd`, `main`.`WithdrawalRequest`.`status`, `main`.`WithdrawalRequest`.`createdAt` FROM `main`.`WithdrawalRequest` WHERE `main`.`WithdrawalRequest`.`userId` = ? ORDER BY `main`.`WithdrawalRequest`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`CryptoDeposit`.`id`, `main`.`CryptoDeposit`.`asset`, `main`.`CryptoDeposit`.`amountUsd`, `main`.`CryptoDeposit`.`status`, `main`.`CryptoDeposit`.`providerId`, `main`.`CryptoDeposit`.`createdAt` FROM `main`.`CryptoDeposit` WHERE (`main`.`CryptoDeposit`.`userId` = ? AND `main`.`CryptoDeposit`.`transactionId` IS NULL) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`type`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`providerId`, `main`.`Order`.`status` FROM `main`.`Order` WHERE `main`.`Order`.`userId` = ? LIMIT ? OFFSET ?
+ GET /api/user/export-statement 200 in 26ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `isEmailVerified`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 327ms
+ GET /api/auth/csrf 200 in 17ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 362ms
+ GET /api/auth/session 200 in 11ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`providerId`, `main`.`Order`.`status` FROM `main`.`Order` WHERE `main`.`Order`.`userId` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`CryptoDeposit`.`id`, `main`.`CryptoDeposit`.`asset`, `main`.`CryptoDeposit`.`amountUsd`, `main`.`CryptoDeposit`.`status`, `main`.`CryptoDeposit`.`providerId`, `main`.`CryptoDeposit`.`createdAt` FROM `main`.`CryptoDeposit` WHERE (`main`.`CryptoDeposit`.`userId` = ? AND `main`.`CryptoDeposit`.`transactionId` IS NULL) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`WithdrawalRequest`.`id`, `main`.`WithdrawalRequest`.`asset`, `main`.`WithdrawalRequest`.`amountUsd`, `main`.`WithdrawalRequest`.`status`, `main`.`WithdrawalRequest`.`createdAt` FROM `main`.`WithdrawalRequest` WHERE `main`.`WithdrawalRequest`.`userId` = ? ORDER BY `main`.`WithdrawalRequest`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`type`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+ GET /api/user/export-statement 200 in 12ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `name`, `email`, `password`, `cashBalance`, `isEmailVerified`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`
+ POST /api/signup 201 in 324ms
+ GET /api/auth/csrf 200 in 16ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 335ms
+ GET /api/auth/session 200 in 12ms
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT 1
+prisma:query SELECT `main`.`WithdrawalRequest`.`id`, `main`.`WithdrawalRequest`.`asset`, `main`.`WithdrawalRequest`.`amountUsd`, `main`.`WithdrawalRequest`.`status`, `main`.`WithdrawalRequest`.`createdAt` FROM `main`.`WithdrawalRequest` WHERE `main`.`WithdrawalRequest`.`userId` = ? ORDER BY `main`.`WithdrawalRequest`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`providerId`, `main`.`Order`.`status` FROM `main`.`Order` WHERE `main`.`Order`.`userId` = ? LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`type`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`CryptoDeposit`.`id`, `main`.`CryptoDeposit`.`asset`, `main`.`CryptoDeposit`.`amountUsd`, `main`.`CryptoDeposit`.`status`, `main`.`CryptoDeposit`.`providerId`, `main`.`CryptoDeposit`.`createdAt` FROM `main`.`CryptoDeposit` WHERE (`main`.`CryptoDeposit`.`userId` = ? AND `main`.`CryptoDeposit`.`transactionId` IS NULL) LIMIT ? OFFSET ?
+ GET /api/user/export-statement 200 in 11ms
+ ✓ Compiled in 217ms (314 modules)
+ GET / 200 in 202ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 553ms (284 modules)
+ GET /favicon.ico 200 in 638ms
+ ✓ Compiled /login in 158ms (600 modules)
+ GET /login 307 in 499ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 8.2s (1915 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ ✓ Compiled in 1408ms (780 modules)
+prisma:query UPDATE `main`.`Order` SET `status` = ?, `updatedAt` = ? WHERE (`main`.`Order`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `userId` AS `userId`, `provider` AS `provider`, `providerId` AS `providerId`, `symbol` AS `symbol`, `side` AS `side`, `type` AS `type`, `qty` AS `qty`, `notional` AS `notional`, `limitPrice` AS `limitPrice`, `status` AS `status`, `filledQty` AS `filledQty`, `filledAvgPrice` AS `filledAvgPrice`, `referencePrice` AS `referencePrice`, `assetClass` AS `assetClass`, `submittedAt` AS `submittedAt`, `updatedAt` AS `updatedAt`
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 17798ms
+ ✓ Compiled /settings in 311ms (1141 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?_rsc=1n6hx 200 in 96ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 1605ms
+ ✓ Compiled /api/portfolio in 231ms (1129 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 3202ms
+ ○ Compiling /markets ...
+ ✓ Compiled /markets in 1222ms (1991 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard?_rsc=syt8b 200 in 2319ms
+ GET /markets 200 in 4360ms
+ ✓ Compiled /api/account in 246ms (1174 modules)
+ ✓ Compiled (1176 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+ GET /api/markets/featured 200 in 1770ms
+ GET /api/account 200 in 2238ms
+ GET /api/account 200 in 2982ms
+ GET /api/markets/featured 200 in 3630ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 1870ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 2076ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1377ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1469ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1995ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 2037ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 4836ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 6447ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?_rsc=1n6hx 200 in 54ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 1438ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1449ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1522ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1578ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1381ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1722ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1515ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1629ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 3519ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1294ms
+ GET /api/portfolio 200 in 1389ms
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1362ms
+ GET / 200 in 82ms
+ ✓ Compiled in 1336ms (1965 modules)
+ ✓ Compiled in 459ms (1965 modules)
+ GET / 200 in 118ms
+ GET / 200 in 60ms
+ ✓ Compiled in 1005ms (1965 modules)
+ GET / 200 in 78ms
+ GET / 200 in 60ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 875ms (1954 modules)
+ GET /_next/static/css/app/layout.css?v=1791659651183 404 in 978ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 969ms
+ GET /_next/static/chunks/main-app.js?v=1791659651183 404 in 971ms
+ GET /_next/static/chunks/webpack.js?v=1791659651183 404 in 979ms
+ ⨯ Error: Cannot find module './8948.js'
+Require stack:
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\_not-found\page.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\build\utils.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:198:28)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:162:22)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22031
+    at Object.<anonymous> (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22084)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js:109:84)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:84
+    at async loadComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:714:36)
+    at async DevServer.findPageComponents (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1962:32)
+    at async DevServer.pipeImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:818:17)
+    at async C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:179:21)
+    at async handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:359:24)
+    at async requestHandlerImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:383:13)
+    at async Server.requestListener (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\app\\_not-found\\page.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ],
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 1843ms (2180 modules)
+ GET / 500 in 2108ms
+ ⨯ Error: Cannot find module './8948.js'
+Require stack:
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\pages\_document.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\build\utils.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:198:28)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:162:22)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22031
+    at Object.<anonymous> (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22084)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js:109:84)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:84
+    at async loadComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:714:36)
+    at async DevServer.findPageComponents (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1962:32)
+    at async DevServer.pipeImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:818:17)
+    at async C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:179:21)
+    at async handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:359:24)
+    at async requestHandlerImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:383:13)
+    at async Server.requestListener (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\pages\\_document.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ],
+  page: '/'
+}
+ GET / 500 in 37ms
+ ⨯ Error: Cannot find module './8948.js'
+Require stack:
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\pages\_document.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\build\utils.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1517:15)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:55:36
+    at wrapResolveFilename (node:internal/modules/cjs/loader:1071:27)
+    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1095:10)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1122:12)
+    at Module._load (node:internal/modules/cjs/loader:1294:5)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at __webpack_require__.f.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:198:28)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:110:67)
+    at Array.map (<anonymous>)
+    at __webpack_require__.X (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\webpack-runtime.js:162:22)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22031
+    at Object.<anonymous> (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\server\app\page.js:1:22084)
+    at Module._compile (node:internal/modules/cjs/loader:1871:14)
+    at Object..js (node:internal/modules/cjs/loader:2002:10)
+    at Module.load (node:internal/modules/cjs/loader:1594:32)
+    at Module._load (node:internal/modules/cjs/loader:1396:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)
+    at Module.<anonymous> (node:internal/modules/cjs/loader:1617:12)
+    at mod.require (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require-hook.js:65:28)
+    at require (node:internal/modules/helpers:153:16)
+    at requirePage (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\require.js:109:84)
+    at C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:84
+    at async loadComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\load-components.js:103:26)
+    at async DevServer.findPageComponentsImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:714:36)
+    at async DevServer.findPageComponents (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:577:20)
+    at async DevServer.renderPageComponent (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1910:24)
+    at async DevServer.renderToResponseImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:1962:32)
+    at async DevServer.pipeImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:922:25)
+    at async NextNodeServer.handleCatchallRenderRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\next-server.js:272:17)
+    at async DevServer.handleRequestImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\base-server.js:818:17)
+    at async C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\trace\trace.js:154:20)
+    at async DevServer.handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\dev\next-dev-server.js:336:24)
+    at async invokeRender (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:179:21)
+    at async handleRequest (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:359:24)
+    at async requestHandlerImpl (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\router-server.js:383:13)
+    at async Server.requestListener (C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\node_modules\next\dist\server\lib\start-server.js:141:13) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\webpack-runtime.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\.next\\server\\pages\\_document.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\require.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\load-components.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\build\\utils.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+    'C:\\Users\\uzukw\\OneDrive\\Desktop\\AI-Terminal\\bulkinvest\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+  ],
+  page: '/'
+}
+ GET / 500 in 15ms
+[?25h
+
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 2.5s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.6s (509 modules)
+ GET / 200 in 3969ms
+ ✓ Compiled in 395ms (239 modules)
+ GET / 200 in 60ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 1622ms (860 modules)
+ GET /login 200 in 1872ms
+ ✓ Compiled /signup in 252ms (867 modules)
+ GET /signup 200 in 418ms
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 647ms (180 modules)
+ GET / 200 in 62ms
+ GET / 200 in 106ms
+ ✓ Compiled in 642ms (564 modules)
+ ✓ Compiled in 565ms (564 modules)
+ ✓ Compiled in 137ms (310 modules)
+ GET / 200 in 157ms
+ GET / 200 in 90ms
+ ✓ Compiled in 926ms (564 modules)
+ GET / 200 in 123ms
+ GET / 200 in 66ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 579ms (571 modules)
+ GET /signup 307 in 800ms
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 5s (1871 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 11322ms
+ GET / 200 in 43ms
+ GET / 200 in 94ms
+ GET / 200 in 762ms
+^C
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 3.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 3.7s (516 modules)
+ GET / 200 in 3961ms
+ ✓ Compiled in 330ms (244 modules)
+ GET / 200 in 129ms
+ GET / 200 in 81ms
+ ✓ Compiled /favicon.ico in 352ms (286 modules)
+ GET /favicon.ico 200 in 457ms
+ GET /favicon.ico 200 in 10ms
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 1657ms (898 modules)
+ GET /signup 200 in 1932ms
+ GET / 200 in 44ms
+ ✓ Compiled /login in 234ms (903 modules)
+ GET /login 200 in 375ms
+ ✓ Compiled /api/auth/[...nextauth] in 147ms (609 modules)
+ GET /api/auth/providers 200 in 593ms
+ GET /api/auth/csrf 200 in 19ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 401 in 372ms
+ GET / 200 in 89ms
+ GET /login 200 in 56ms
+ GET /api/auth/providers 200 in 22ms
+ GET /api/auth/csrf 200 in 11ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`password`, `main`.`User`.`cashBalance`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationToken`, `main`.`User`.`verificationTokenExpiresAt`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE (`main`.`User`.`email` = ? AND 1=1) LIMIT ? OFFSET ?
+ POST /api/auth/callback/credentials 200 in 328ms
+ ○ Compiling /src/middleware ...
+ ✓ Compiled /src/middleware in 690ms (180 modules)
+ ○ Compiling /dashboard ...
+ ✓ Compiled /dashboard in 4.2s (1879 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard?_rsc=syt8b 200 in 1696ms
+ ✓ Compiled /api/portfolio in 338ms (1138 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 3178ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1521ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1552ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1562ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1740ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1489ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1600ms
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1517ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1524ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1486ms
+ ○ Compiling /settings ...
+ ✓ Compiled /settings in 637ms (1910 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?_rsc=1n6hx 200 in 102ms
+ ✓ Compiled /history in 428ms (1915 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT COUNT(*) AS `_count$_all` FROM (SELECT `main`.`Transaction`.`id` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? LIMIT ? OFFSET ?) AS `sub`
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /history 200 in 644ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?_rsc=1n6hx 200 in 50ms
+ ✓ Compiled /api/user/verify-email in 252ms (1144 modules)
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ POST /api/user/verify-email 201 in 327ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`verificationTokenExpiresAt` FROM `main`.`User` WHERE (`main`.`User`.`verificationToken` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query UPDATE `main`.`User` SET `isEmailVerified` = ?, `verificationToken` = ?, `verificationTokenExpiresAt` = ?, `updatedAt` = ? WHERE (`main`.`User`.`id` = ? AND 1=1) RETURNING `id` AS `id`, `name` AS `name`, `email` AS `email`, `password` AS `password`, `cashBalance` AS `cashBalance`, `isEmailVerified` AS `isEmailVerified`, `verificationToken` AS `verificationToken`, `verificationTokenExpiresAt` AS `verificationTokenExpiresAt`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ GET /api/user/verify-email?token=659dfe9c51a515d7d7fec363638373d367e30775e166535a815fbd5a602e123a 303 in 34ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified`, `main`.`User`.`createdAt` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /settings?verified=1 200 in 139ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 1723ms
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`name`, `main`.`User`.`email`, `main`.`User`.`cashBalance` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Holding`.`id`, `main`.`Holding`.`symbol`, `main`.`Holding`.`shares`, `main`.`Holding`.`avgPrice`, `main`.`Holding`.`userId` FROM `main`.`Holding` WHERE `main`.`Holding`.`userId` IN (?) ORDER BY `main`.`Holding`.`symbol` ASC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Transaction`.`id`, `main`.`Transaction`.`userId`, `main`.`Transaction`.`symbol`, `main`.`Transaction`.`type`, `main`.`Transaction`.`shares`, `main`.`Transaction`.`price`, `main`.`Transaction`.`amount`, `main`.`Transaction`.`currency`, `main`.`Transaction`.`provider`, `main`.`Transaction`.`reference`, `main`.`Transaction`.`txHash`, `main`.`Transaction`.`createdAt` FROM `main`.`Transaction` WHERE `main`.`Transaction`.`userId` = ? ORDER BY `main`.`Transaction`.`createdAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`isEmailVerified` FROM `main`.`User` WHERE (`main`.`User`.`id` = ? AND 1=1) LIMIT ? OFFSET ?
+ GET /dashboard 200 in 542ms
+ ✓ Compiled /api/portfolio in 203ms (1146 modules)
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 2019ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1498ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1505ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1380ms
+prisma:query SELECT 1
+prisma:query SELECT `main`.`Order`.`id`, `main`.`Order`.`userId`, `main`.`Order`.`provider`, `main`.`Order`.`providerId`, `main`.`Order`.`symbol`, `main`.`Order`.`side`, `main`.`Order`.`type`, `main`.`Order`.`qty`, `main`.`Order`.`notional`, `main`.`Order`.`limitPrice`, `main`.`Order`.`status`, `main`.`Order`.`filledQty`, `main`.`Order`.`filledAvgPrice`, `main`.`Order`.`referencePrice`, `main`.`Order`.`assetClass`, `main`.`Order`.`submittedAt`, `main`.`Order`.`updatedAt` FROM `main`.`Order` WHERE (`main`.`Order`.`userId` = ? AND `main`.`Order`.`status` IN (?,?,?,?,?,?,?)) ORDER BY `main`.`Order`.`submittedAt` DESC LIMIT ? OFFSET ?
+ GET /api/portfolio 200 in 1499ms
+ ✓ Compiled /api/auth/[...nextauth] in 432ms (1143 modules)
+ GET /api/auth/csrf 200 in 477ms
+ POST /api/auth/signout 200 in 11ms
+ GET /login 200 in 128ms
+ GET /login?callbackUrl=%2Fdashboard 200 in 43ms
+ GET /login?callbackUrl=%2Fsettings 200 in 81ms
+ GET /login?callbackUrl=%2Fsettings 200 in 57ms
+ GET / 200 in 98ms
+ GET / 200 in 87ms
+ GET / 200 in 76ms
+ ✓ Compiled in 1052ms (783 modules)
+ ✓ Compiled in 1676ms (1917 modules)
+ ✓ Compiled in 233ms (786 modules)
+ ✓ Compiled in 462ms (786 modules)
+ ○ Compiling /signup ...
+ ✓ Compiled /signup in 956ms (1895 modules)
+ GET /signup 200 in 1227ms
+ GET /login 200 in 70ms
+ GET /signup 200 in 141ms
+ GET /signup 200 in 133ms
+ GET / 200 in 153ms
+ GET /login 200 in 56ms
+ ✓ Compiled in 1926ms (1376 modules)
+ GET /signup?_rsc=1orp0 200 in 583ms
+ GET /login?_rsc=g0rnx 200 in 701ms
+ ✓ Compiled in 767ms (783 modules)
+ GET /signup?_rsc=1orp0 200 in 83ms
+ GET /login?_rsc=g0rnx 200 in 84ms
+ ✓ Compiled in 1849ms (1376 modules)
+ GET /signup?_rsc=1orp0 200 in 296ms
+ GET /login?_rsc=g0rnx 200 in 306ms
+ ✓ Compiled in 2.4s (1381 modules)
+ GET /signup?_rsc=1orp0 200 in 139ms
+ GET /login?_rsc=g0rnx 200 in 140ms
+ GET / 200 in 101ms
+ GET /signup 200 in 66ms
+ GET / 200 in 52ms
+ ✓ Compiled in 788ms (1376 modules)
+ GET /signup?_rsc=1orp0 200 in 99ms
+ GET /login?_rsc=g0rnx 200 in 100ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ src\app\page.tsx (382:16) @ GradientASCII
+ ⨯ ReferenceError: GradientASCII is not defined
+    at Home (./src/app/page.tsx:640:127)
+digest: "390880431"
+[0m [90m 380 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"pointer-events-none absolute inset-y-0 left-1/2 -z-10 w-screen -translate-x-1/2"[39m[33m>[39m[0m
+[0m [90m 381 |[39m             [33m<[39m[33mdiv[39m className[33m=[39m[32m"absolute inset-0 opacity-60"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 382 |[39m               [33m<[39m[33mGradientASCII[39m[0m
+[0m [90m     |[39m                [31m[1m^[22m[39m[0m
+[0m [90m 383 |[39m                 colors[33m=[39m{[[32m"#e44008"[39m[33m,[39m [32m"#f6f8ff"[39m[33m,[39m [32m"#a5d8ff"[39m[33m,[39m [32m"#772517"[39m]}[0m
+[0m [90m 384 |[39m                 shape[33m=[39m[32m"horizon"[39m[0m
+[0m [90m 385 |[39m                 characters[33m=[39m[32m" =+xX0S8#@"[39m[0m
+ GET / 500 in 269ms
+ ✓ Compiled /favicon.ico in 420ms (625 modules)
+ GET /favicon.ico 200 in 496ms
+ ✓ Compiled in 421ms (1408 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /login?_rsc=g0rnx 200 in 81ms
+ GET /signup?_rsc=1orp0 200 in 154ms
+ GET / 200 in 166ms
+ GET /favicon.ico 200 in 23ms
+ ✓ Compiled in 205ms (783 modules)
+ GET /login?_rsc=g0rnx 200 in 60ms
+ GET /signup?_rsc=1orp0 200 in 61ms
+ GET / 200 in 68ms
+ GET / 200 in 43ms
+ GET /favicon.ico 200 in 16ms
+ GET / 200 in 62ms
+ GET /favicon.ico 200 in 15ms
+ GET / 200 in 76ms
+ GET /favicon.ico 200 in 15ms
+ ✓ Compiled in 285ms (783 modules)
+ GET /signup?_rsc=1orp0 200 in 41ms
+ GET /login?_rsc=g0rnx 200 in 51ms
+ ✓ Compiled in 205ms (783 modules)
+ GET /signup?_rsc=1orp0 200 in 126ms
+ GET /login?_rsc=g0rnx 200 in 132ms
+ ✓ Compiled in 272ms (783 modules)
+ GET /login?_rsc=g0rnx 200 in 41ms
+ GET /signup?_rsc=1orp0 200 in 42ms
+ ✓ Compiled in 538ms (1376 modules)
+ GET /login?_rsc=g0rnx 200 in 151ms
+ GET /signup?_rsc=1orp0 200 in 153ms
+ ⨯ ./src/app/page.tsx
+Error: 
+  [31mx[0m Unexpected token `div`. Expected jsx identifier
+     ,-[[36;1;4mC:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\src\app\page.tsx[0m:308:1]
+ [2m308[0m |   const [activeTab, setActiveTab] = useState("Features");
+ [2m309[0m | 
+ [2m310[0m |   return (
+ [2m311[0m |     <div className="relative min-h-screen overflow-hidden bg-[#0B0B0E] text-slate-300">
+     : [31;1m     ^^^[0m
+ [2m312[0m |       {/* Ambient background — obsidian base with a glowing orange/coral nebula */}
+ [2m313[0m |       <div className="pointer-events-none absolute inset-0 -z-10">
+ [2m314[0m |         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-orange-600/20 via-black to-black" />
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 3.7s (1593 modules)
+ GET /login?_rsc=g0rnx 200 in 334ms
+ GET /signup?_rsc=1orp0 200 in 335ms
+ GET /login?_rsc=g0rnx 200 in 152ms
+ GET /signup?_rsc=1orp0 200 in 153ms
+ GET /signup?_rsc=1orp0 200 in 179ms
+ GET /login?_rsc=g0rnx 200 in 180ms
+ GET / 200 in 442ms
+ GET /signup 200 in 446ms
+ GET /login 200 in 474ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\cache\webpack\client-development-fallback\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\uzukw\OneDrive\Desktop\AI-Terminal\bulkinvest\.next\cache\webpack\client-development-fallback\0.pack.gz'
+ GET / 200 in 86ms
+ GET /signup 200 in 23ms
+ GET / 200 in 59ms
+ GET / 200 in 53ms
+ GET / 200 in 42ms
+ GET / 200 in 54ms
+ ✓ Compiled in 796ms (1618 modules)
+ GET /login?_rsc=g0rnx 200 in 160ms
+ GET /signup?_rsc=1orp0 200 in 162ms
+ GET / 200 in 104ms
+ GET / 200 in 91ms
+ ✓ Compiled /favicon.ico in 424ms (666 modules)
+ GET /favicon.ico 200 in 489ms
+ GET / 200 in 125ms
+ GET /favicon.ico 200 in 11ms
+ GET / 200 in 61ms
+ GET /favicon.ico 200 in 31ms
+ GET / 200 in 48ms
+ GET /favicon.ico 200 in 13ms
+ GET / 200 in 54ms
+ ✓ Compiled in 927ms (1600 modules)
+ GET /login?_rsc=g0rnx 200 in 197ms
+ GET /signup?_rsc=1orp0 200 in 204ms
+ ✓ Compiled in 736ms (1600 modules)
+ GET /login?_rsc=g0rnx 200 in 59ms
+ GET /signup?_rsc=1orp0 200 in 71ms
+ ✓ Compiled in 268ms (968 modules)
+ GET /signup?_rsc=1orp0 200 in 161ms
+ GET /login?_rsc=g0rnx 200 in 169ms
+ ✓ Compiled in 283ms (968 modules)
+ GET /login?_rsc=g0rnx 200 in 65ms
+ GET /signup?_rsc=1orp0 200 in 68ms
+ GET / 200 in 90ms
+ GET / 200 in 60ms
+ GET / 200 in 149ms
+ GET / 200 in 274ms
+ GET / 200 in 72ms
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 852ms (664 modules)
+ GET /favicon.ico 200 in 1014ms
+ GET / 200 in 315ms
+[?25h
+
+> bulkinvest@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 4.6s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.1s (516 modules)
+ GET / 200 in 5418ms
+ ✓ Compiled in 366ms (244 modules)
+ GET / 200 in 41ms
+ ○ Compiling /login ...
+ ✓ Compiled /login in 2.3s (864 modules)
+ GET /login 200 in 2555ms
+ ✓ Compiled /signup in 339ms (871 modules)
+ GET /signup 200 in 539ms
